@@ -208,3 +208,71 @@ input:focus, textarea:focus, select:focus {
     border-color: #ff416c !important;
     box-shadow: 0 0 0 4px rgba(255, 65, 108, 0.1) !important;
 }
+/* --- Stil pentru Secțiunea Despre Noi (Pasul 2) --- */
+.about-section {
+    padding: 80px 20px;
+    background-color: #ffffff; /* Fundal curat alb */
+    text-align: center;
+}
+
+.about-content {
+    max-width: 900px;
+    margin: 0 auto; /* Centrează conținutul pe mijlocul ecranului */
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Titlu colorat modern */
+}
+
+.about-content > p {
+    font-size: 1.15rem;
+    color: #4a5568;
+    line-height: 1.8;
+    margin-bottom: 50px;
+    font-style: italic; /* O tentă elegantă pentru descrierea generală */
+}
+
+/* Grila pentru Misiune și Viziune */
+.mission-vision-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.info-box {
+    background: #f8fafc;
+    padding: 40px 30px;
+    border-radius: 20px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 420px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.02);
+    transition: all 0.4s ease;
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    border-color: #ff416c;
+}
+
+.info-box h3 {
+    font-size: 1.5rem;
+    color: #1a202c;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.info-box p {
+    font-size: 1rem;
+    color: #718096;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
