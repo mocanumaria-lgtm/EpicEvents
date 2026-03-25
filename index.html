@@ -118,6 +118,8 @@
                 <a href="#calculator" class="nav-item">💰 1. Calculator Buget</a>
                 <a href="#checklist" class="nav-item">✅ 2. Check-list Eveniment</a>
                 <a href="#booking" class="nav-item">📅 3. Calendar Întâlniri</a>
+                <a href="#documents" class="nav-item">📂 4. Documente & Contracte</a>
+<a href="#quiz" class="nav-item">🎤 5. Quiz Preferințe</a>
                 <a href="#team" class="nav-item">👥 Echipa Noastră</a>
             </nav>
 
@@ -210,3 +212,38 @@
                     <div class="booking-box">
                         <div class="form-group">
                             <label>Alege Zi
+                                <div class="app-card wide-card" id="documents" style="margin-top: 25px; background: white; border-radius: 20px; padding: 30px; border: 1px solid #F1EEF4; box-shadow: 0 10px 30px rgba(45, 9, 51, 0.04);">
+    <div class="card-header" style="display: flex; align-items: center; gap: 10px; margin-bottom: 25px; border-bottom: 1px solid #F1EEF4; padding-bottom: 15px;">
+        <span class="icon" style="font-size: 1.5rem;">📂</span>
+        <h3 style="font-size: 1.2rem; color: #2D0933; font-family: 'Playfair Display', serif; font-weight: 700;">4. Documentele Tale</h3>
+    </div>
+    <ul class="document-list" style="list-style: none; display: flex; flex-direction: column; gap: 15px;">
+        <li style="display: flex; justify-content: space-between; align-items: center; background: #FDFBFF; padding: 15px; border-radius: 12px; border: 1px solid #F1EEF4;">
+            <div class="doc-info" style="display: flex; align-items: center; gap: 12px;">
+                <span class="doc-icon" style="font-size: 1.8rem;">📄</span>
+                <div>
+                    <h4 style="font-size: 0.95rem; color: #2D0933;">Contract Prestări Servicii.pdf</h4>
+                    <span style="font-size: 0.8rem; color: #777;">Semnat pe 15.10.2025</span>
+                </div>
+            </div>
+            <a href="#" class="download-btn" style="color: #D4AF37; font-size: 0.9rem; font-weight: 600; text-decoration: none;">Descarcă</a>
+        </li>
+    </ul>
+</div>
+
+<div class="app-card wide-card" id="quiz" style="margin-top: 25px; background: white; border-radius: 20px; padding: 30px; border: 1px solid #F1EEF4; box-shadow: 0 10px 30px rgba(45, 9, 51, 0.04);">
+    <div class="card-header" style="display: flex; align-items: center; gap: 10px; margin-bottom: 25px; border-bottom: 1px solid #F1EEF4; padding-bottom: 15px;">
+        <span class="icon" style="font-size: 1.5rem;">🎤</span>
+        <h3 style="font-size: 1.2rem; color: #2D0933; font-family: 'Playfair Display', serif; font-weight: 700;">5. Quiz Preferințe (Formular Stil)</h3>
+    </div>
+    <div class="quiz-box">
+        <div class="form-group" style="margin-bottom: 15px; display: flex; flex-direction: column; gap: 8px;">
+            <label style="font-size: 0.9rem; color: #555; font-weight: 600;">Ce vibe dorești pentru eveniment?</label>
+            <div class="radio-group" style="display: flex; flex-direction: column; gap: 10px;">
+                <label style="display: flex; align-items: center; gap: 10px; color: #2D0933; cursor: pointer;"><input type="radio" name="vibe" value="elegant" checked style="accent-color: #D4AF37; width: 18px; height: 18px;"> ✨ Elegant & Luxos</label>
+                <label style="display: flex; align-items: center; gap: 10px; color: #2D0933; cursor: pointer;"><input type="radio" name="vibe" value="boho" style="accent-color: #D4AF37; width: 18px; height: 18px;"> 🌿 Rustic / Boho-Chic</label>
+            </div>
+        </div>
+        <button class="gold-btn" onclick="alert('Preferințele au fost trimise!')" style="width: 100%; padding: 14px; background: #D4AF37; color: #2D0933; border: none; border-radius: 12px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">Trimite Preferințele</button>
+    </div>
+</div>
