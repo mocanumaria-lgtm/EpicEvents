@@ -2,15 +2,39 @@
 <html lang="ro">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Epic Events App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epic Events - Panou Control</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
-    <style>
-        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }
-        iframe { width: 100%; height: 100%; border: none; }
-    </style>
 </head>
 <body>
-    <iframe src="https://epicevents.site"></iframe>
+    <nav class="bottom-nav">
+        <a href="index.html" class="active">🏠 Bord</a>
+        <a href="catalog.html">📋 Catalog</a>
+        <a href="documente.html">📁 Seif</a>
+        <a href="rsvp.html">👥 Invitati</a>
+    </nav>
+
+    <div class="container">
+        <h1>Salut, Maria! 👋</h1>
+        
+        <div class="card shadow">
+            <h3>⏳ Timeline Eveniment</h3>
+            <p>Alegerea locației: ✅ Gata</p>
+            <p>Degustare meniu: 📅 Săptămâna viitoare</p>
+            <div class="progress-bar"><div class="progress" style="width: 40%;"></div></div>
+        </div>
+
+        <div class="card shadow">
+            <h3>💰 Buget în timp real</h3>
+            <p>Total estimat: 5.000€</p>
+            <p>Plătit: 2.000€</p>
+            <p><strong>Rest de plată: 3.000€</strong></p>
+        </div>
+        
+        <button class="btn-primary">Chat cu Managerul 💬</button>
+    </div>
+
+    <script src="sw-register.js"></script>
 </body>
 </html>
