@@ -1,415 +1,195 @@
-/* Paleta de culori: Royal Purple & Gold */
-:root {
-  --mov-inchis: #1a0b2e;      /* Fundalul principal */
-  --mov-card: #2d144d;       /* Culoarea cardurilor */
-  --auriu-mat: #d4af37;      /* Text și accente */
-  --auriu-gradient: linear-gradient(45deg, #bf953f, #fcf6ba, #b38728, #aa771c);
-  --text-alb: #ffffff;
-  --text-gri: #d1d1d1;
-}
-
-/* Animația de apariție (Fade In) */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-body {
-  font-family: 'Segoe UI', Roboto, sans-serif;
-  background-color: var(--mov-inchis);
-  color: var(--text-alb);
-  margin: 0;
-  padding-bottom: 90px;
-  animation: fadeIn 0.8s ease-out; /* Aplică animația la deschidere */
-}
-
-.container {
-  padding: 20px;
-}
-
-h1, h2, h3 {
-  color: var(--auriu-mat);
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-}
-
-/* Cardurile Luxury Mov */
-.card {
-  background: var(--mov-card);
-  padding: 20px;
-  border-radius: 18px;
-  margin-bottom: 20px;
-  border: 1px solid rgba(212, 175, 55, 0.4); /* Bordură fină aurie */
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-}
-
-/* Butoanele de Aur */
-.btn-primary {
-  background: var(--auriu-gradient);
-  color: #1a0b2e; /* Text mov închis pe buton auriu */
-  border: none;
-  padding: 16px;
-  width: 100%;
-  border-radius: 12px;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 14px;
-  cursor: pointer;
-  box-shadow: 0 4px 15px rgba(179, 135, 40, 0.3);
-  transition: 0.3s;
-}
-
-.btn-primary:active {
-  transform: scale(0.98);
-}
-
-/* Navigarea de jos */
-.bottom-nav {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background: rgba(26, 11, 46, 0.95); /* Mov transparent */
-  backdrop-filter: blur(15px);
-  display: flex;
-  justify-content: space-around;
-  padding: 15px 0;
-  border-top: 2px solid var(--auriu-mat);
-}
-
-.bottom-nav a {
-  text-decoration: none;
-  color: var(--text-gri);
-  font-size: 11px;
-  transition: 0.3s;
-}
-
-.bottom-nav a.active {
-  color: var(--auriu-mat);
-  font-weight: bold;
-}
-
-/* Progresul auriu */
-.progress-bar {
-  background: rgba(255,255,255,0.1);
-  height: 8px;
-  border-radius: 10px;
-  margin-top: 10px;
-}
-
-.progress {
-  background: var(--auriu-gradient);
-  height: 100%;
-  border-radius: 10px;
-}
-.notification-area {
-    padding: 20px 20px 0 20px;
-}
-
-.notif-card {
-    background: rgba(255, 255, 255, 0.05);
-    border-left: 4px solid var(--auriu-mat);
-    padding: 15px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    border-top: 1px solid rgba(212, 175, 55, 0.1);
-}
-
-.notif-icon {
-    font-size: 20px;
-    background: var(--mov-card);
-    padding: 10px;
-    border-radius: 50%;
-    border: 1px solid var(--auriu-mat);
-}
-
-.notif-content strong {
-    color: var(--auriu-mat);
-    font-size: 11px;
-    display: block;
-}
-
-.notif-content p {
-    margin: 3px 0;
-    font-size: 13px;
-}
-
-.pulse {
-    animation: shadow-pulse 2s infinite;
-}
-
-@keyframes shadow-pulse {
-  0% { box-shadow: 0 0 0 0px rgba(212, 175, 55, 0.4); }
-  100% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
-}
 /* ==========================================
-   ✨ CODUL PENTRU SITE FLUID ȘI COMERCIAL ✨
+   💎 STILUL DE APLICAȚIE EPIC EVENTS (Mov + Aur)
    ========================================== */
 
-/* 1. Resetăm fontul și culorile să fie moderne */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Până pui Google Fonts */
-    color: #2d3748; /* Un gri-negru premium, nu negru tăciune */
-    background-color: #f8fafc;
+    font-family: 'Poppins', sans-serif;
+    background-color: #F8F7FA; /* Gri foarte deschis, curat */
+    color: #333;
+    overflow: hidden; /* Blocăm scroll-ul pe tot ecranul ca la o aplicație */
+    height: 100vh;
 }
 
-/* 2. Butoanele devin rotunjite și reacționează la mouse */
-.btn, button, .hero-content .btn, .cta-button {
-    display: inline-block;
-    padding: 14px 32px;
-    background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%) !important; /* Gradient roz-portocaliu vibrant */
-    color: white !important;
+.app-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* 📱 SIDEBAR-UL APLICAȚIEI */
+.sidebar {
+    width: 280px;
+    background-color: #2D0933; /* Mov închis, foarte elegant */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 20px;
+}
+
+.logo-area h2 {
+    font-family: 'Playfair Display', serif;
+    color: #D4AF37; /* Auriu mat */
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.logo-area span {
+    font-size: 0.8rem;
+    color: #A38CA6;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 50px;
+    flex-grow: 1;
+}
+
+.nav-item {
+    color: #E2D5E5;
     text-decoration: none;
+    padding: 15px 20px;
+    border-radius: 12px;
+    font-size: 1rem;
     font-weight: 600;
-    border-radius: 50px !important; /* Colțuri rotunjite */
-    border: none !important;
-    box-shadow: 0 10px 20px rgba(255, 65, 108, 0.3);
-    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important; /* Mișcare fluidă */
-    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.btn:hover, button:hover, .hero-content .btn:hover, .cta-button:hover {
-    transform: translateY(-5px); /* Se ridică lin */
-    box-shadow: 0 15px 25px rgba(255, 65, 108, 0.4);
-    filter: brightness(1.1);
+.nav-item:hover, .nav-item.active {
+    background-color: #D4AF37; /* Se face aurie la selecție */
+    color: #2D0933;
 }
 
-/* 3. Cardurile cu pachete/servicii devin elegante */
-.pricing-card, .service-card, .package {
-    background: #ffffff !important;
-    border-radius: 20px !important;
-    padding: 40px 30px !important;
-    border: 1px solid #f0f0f0 !important;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05) !important;
-    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
-}
-
-.pricing-card:hover, .service-card:hover, .package:hover {
-    transform: translateY(-10px) !important;
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1) !important;
-    border-color: #ff416c !important;
-}
-
-/* 4. Formularul de contact devine curat și modern */
-input, textarea, select {
-    width: 100%;
-    padding: 14px 20px !important;
-    border-radius: 12px !important;
-    border: 2px solid #e2e8f0 !important;
-    transition: all 0.3s ease !important;
-    background-color: #ffffff !important;
-}
-
-input:focus, textarea:focus, select:focus {
-    outline: none !important;
-    border-color: #ff416c !important;
-    box-shadow: 0 0 0 4px rgba(255, 65, 108, 0.1) !important;
-}
-/* --- Stil pentru Secțiunea Despre Noi (Pasul 2) --- */
-.about-section {
-    padding: 80px 20px;
-    background-color: #ffffff; /* Fundal curat alb */
+.sidebar-footer {
+    color: #7A5F80;
+    font-size: 0.8rem;
     text-align: center;
 }
 
-.about-content {
-    max-width: 900px;
-    margin: 0 auto; /* Centrează conținutul pe mijlocul ecranului */
+/* 💻 CONȚINUTUL PRINCIPAL */
+.main-content {
+    flex-grow: 1;
+    background-color: #F8F7FA;
+    padding: 40px;
+    overflow-y: auto; /* Doar zona asta are scroll dacă e nevoie */
 }
 
-.about-content h2 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin-bottom: 20px;
-    background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; /* Titlu colorat modern */
-}
-
-.about-content > p {
-    font-size: 1.15rem;
-    color: #4a5568;
-    line-height: 1.8;
-    margin-bottom: 50px;
-    font-style: italic; /* O tentă elegantă pentru descrierea generală */
-}
-
-/* Grila pentru Misiune și Viziune */
-.mission-vision-grid {
+.app-header {
     display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #EAE8EF;
+    padding-bottom: 20px;
 }
 
-.info-box {
-    background: #f8fafc;
-    padding: 40px 30px;
-    border-radius: 20px;
-    flex: 1;
-    min-width: 300px;
-    max-width: 420px;
-    border: 1px solid #e2e8f0;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.02);
-    transition: all 0.4s ease;
-}
-
-.info-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
-    border-color: #ff416c;
-}
-
-.info-box h3 {
-    font-size: 1.5rem;
-    color: #1a202c;
-    margin-bottom: 15px;
+.welcome h1 {
+    font-family: 'Playfair Display', serif;
     font-weight: 700;
+    font-size: 2.2rem;
+    color: #2D0933;
 }
 
-.info-box p {
+.gold-text {
+    color: #D4AF37;
+}
+
+.welcome p {
+    color: #777;
+    margin-top: 5px;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #D4AF37;
+    object-fit: cover;
+}
+
+/* 📊 GRILA DE CARDURI DIN APLICAȚIE */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.app-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(45, 9, 51, 0.04); /* Umbră cu tentă mov */
+    border: 1px solid #F1EEF4;
+    transition: transform 0.3s ease;
+}
+
+.app-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-card h3 {
     font-size: 1rem;
-    color: #718096;
-    line-height: 1.6;
-    margin-bottom: 0;
-}
-/* ==========================================
-   💎 STILUL PREMIUM EPIC EVENTS (URBAN & LUXURY)
-   ========================================== */
-
-/* 1. FUNDALUL ȘI TEXTUL GENERAL */
-body {
-    font-family: 'Segoe UI', Roboto, Helvetica, sans-serif !important;
-    background-color: #fcfcfd !important; /* Un alb-crem foarte discret, de lux */
-    color: #23272e !important; /* Gri închis intens, nu negru obositor */
-    line-height: 1.8 !important; /* Spațiu mare între rânduri */
+    color: #777;
+    margin-bottom: 15px;
 }
 
-/* 2. TITLURILE (Mari, impunătoare și clare) */
-h1 {
-    font-size: 3.5rem !important; /* URIAȘ și vizibil */
-    font-weight: 800 !important;
-    letter-spacing: -1.5px !important;
-    color: #11141a !important;
-    margin-bottom: 25px !important;
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2D0933;
+    display: block;
+    margin-bottom: 5px;
 }
 
-h2 {
-    font-size: 2.8rem !important; /* Titlurile de secțiuni foarte mari */
-    font-weight: 800 !important;
-    letter-spacing: -1px !important;
-    color: #11141a !important;
-    margin-bottom: 30px !important;
-    text-align: center !important;
+.stat-card p {
+    font-size: 0.9rem;
+    color: #D4AF37;
+    font-weight: 600;
 }
 
-h3 {
-    font-size: 1.6rem !important;
-    font-weight: 700 !important;
-    color: #1a1e26 !important;
-    margin-bottom: 15px !important;
+.wide-card {
+    grid-column: span 2;
 }
 
-/* 3. PARAGRAFELE (Scris mare, ușor de citit) */
-p {
-    font-size: 1.25rem !important; /* Text considerabil mai mare */
-    color: #444b59 !important; /* Culoare elegantă */
-    margin-bottom: 25px !important;
+.team-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
 }
 
-/* Subtitlurile de sub H2 */
-.section-subtitle {
-    font-size: 1.35rem !important;
-    color: #667085 !important;
-    max-width: 800px !important;
-    margin: 0 auto 60px auto !important;
-    text-align: center !important;
+.team-mini-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 12px;
+    background: #FDFBFF;
+    border: 1px solid #F1EEF4;
 }
 
-/* 4. CARDURILE DE ECHIPĂ ȘI SERVICII (Aerisite și elegante) */
-.team-card, .service-card, .info-box {
-    background: #ffffff !important;
-    border-radius: 24px !important; /* Colțuri foarte rotunjite, moderne */
-    padding: 40px !important; /* Spațiu imens în interior */
-    border: 1px solid #eaeef3 !important;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.04) !important; /* Umbră fină de revistă */
-    transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1) !important;
+.mini-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    object-fit: cover;
 }
 
-.team-card:hover, .service-card:hover {
-    transform: translateY(-12px) !important;
-    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.08) !important;
+.team-mini-card h4 {
+    color: #2D0933;
+    font-size: 1rem;
 }
 
-.team-info h3 {
-    font-size: 1.5rem !important; /* Numele echipei mai mari */
-    margin-top: 15px !important;
+.team-mini-card span {
+    color: #D4AF37;
+    font-size: 0.85rem;
+    font-weight: 600;
 }
-
-.team-info .role {
-    font-size: 1.1rem !important; /* Funcția mai vizibilă */
-    font-weight: 700 !important;
-    color: #e63946 !important; /* Un roșu-coral de lux */
-    display: block !important;
-    margin-bottom: 15px !important;
-}
-
-.team-info p {
-    font-size: 1.1rem !important; /* Descrierea echipei mai mare */
-    line-height: 1.6 !important;
-}
-
-/* 5. SECȚIUNILE (Să respire!) */
-section {
-    padding: 120px 30px !important; /* Spațiu uriaș sus și jos */
-}
-/* ==========================================
-   👑 TEMA DE LUX: MOV ȘI AURIU (Epic Events)
-   ========================================== */
-
-body {
-    background-color: #ffffff !important; /* Fundal alb curat */
-    color: #4A154B !important; /* Textul general devine un mov închis foarte elegant */
-    font-family: 'Segoe UI', Arial, sans-serif !important;
-}
-
-/* 1. TITLURILE DEVIN MOV SAU AURII */
-h1 {
-    color: #4A154B !important; /* Mov închis regal */
-    font-size: 3.5rem !important;
-    font-weight: 800 !important;
-}
-
-h2 {
-    color: #D4AF37 !important; /* Auriu metalic superb */
-    font-size: 2.8rem !important;
-    font-weight: 800 !important;
-    text-align: center !important;
-}
-
-h3 {
-    color: #4A154B !important; /* Mov regal */
-    font-size: 1.8rem !important;
-}
-
-/* 2. BUTOANELE (Aurii cu text mov/alb) */
-.btn, button, .cta-button {
-    background: linear-gradient(135deg, #D4AF37 0%, #FBF5B7 100%) !important; /* Gradient Auriu strălucitor */
-    color: #4A154B !important; /* Text mov pe buton auriu */
-    font-weight: 700 !important;
-    border-radius: 50px !important;
-    border: 2px solid #D4AF37 !important;
-    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3) !important;
-    padding: 15px 35px !important;
-    font-size: 1.2rem !important;
-    transition: all 0.4s ease !important;
-}
-
-.btn:hover, button:hover {
-    transform: translateY(-5px) !important;
-    box-shadow: 0 15px 25px rgba(212, 175, 55, 0.5) !important;
-    background: #4A154B !important; /* Când pui mouse-ul se face mov */
-    color: #D4AF37 !important; /*
