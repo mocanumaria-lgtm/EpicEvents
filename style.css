@@ -193,3 +193,283 @@ body {
     font-size: 0.85rem;
     font-weight: 600;
 }
+/* ==========================================
+   💎 STIL PREMIUM DE APLICAȚIE (MOV + AUR)
+   ========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F8F7FA;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.app-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* 📱 SIDEBAR - MENIU LATERAL */
+.sidebar {
+    width: 280px;
+    background-color: #2D0933; /* Movul tău de lux */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 20px;
+}
+
+.logo-area h2 {
+    font-family: 'Playfair Display', serif;
+    color: #D4AF37; /* Auriu */
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.logo-area span {
+    font-size: 0.8rem;
+    color: #A38CA6;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 40px;
+    flex-grow: 1;
+}
+
+.nav-item {
+    color: #E2D5E5;
+    text-decoration: none;
+    padding: 14px 18px;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-item:hover, .nav-item.active {
+    background-color: #D4AF37;
+    color: #2D0933;
+    font-weight: 600;
+}
+
+.sidebar-footer {
+    color: #7A5F80;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+/* 💻 CONȚINUTUL PRINCIPAL */
+.main-content {
+    flex-grow: 1;
+    background-color: #F8F7FA;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #EAE8EF;
+    padding-bottom: 20px;
+}
+
+.welcome h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: #2D0933;
+}
+
+.gold-text {
+    color: #D4AF37;
+}
+
+.welcome p {
+    color: #777;
+    margin-top: 5px;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #D4AF37;
+    object-fit: cover;
+}
+
+/* 📊 GRILA DE FUNCȚIONALITĂȚI */
+.app-sections-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+@media (max-width: 900px) {
+    .app-sections-grid { grid-template-columns: 1fr; }
+}
+
+.app-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(45, 9, 51, 0.04);
+    border: 1px solid #F1EEF4;
+    transition: transform 0.3s ease;
+}
+
+.app-card:hover { transform: translateY(-3px); }
+
+.wide-card {
+    grid-column: span 2;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #F1EEF4;
+    padding-bottom: 15px;
+}
+
+.card-header h3 {
+    font-size: 1.25rem;
+    color: #2D0933;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+.icon { font-size: 1.5rem; }
+
+/* 🔧 STILURI FORMULARE ȘI ELEMENTE */
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    color: #555;
+    font-weight: 600;
+}
+
+select, input[type="number"], input[type="date"] {
+    padding: 12px 15px;
+    border: 2px solid #EAE8EF;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    color: #2D0933;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+select:focus, input:focus {
+    border-color: #D4AF37;
+}
+
+.checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.checkboxes label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    color: #2D0933;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    accent-color: #D4AF37; /* Checkbox auriu */
+    width: 18px;
+    height: 18px;
+}
+
+/* TOTAL BOX (Calculator) */
+.total-box {
+    background-color: #2D0933;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.total-box h2 {
+    color: #D4AF37;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+}
+
+/* 📜 STIL TO-DO LIST (Check-list) */
+.todo-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.todo-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #FDFBFF;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #F1EEF4;
+}
+
+.todo-list label {
+    color: #2D0933;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+    color: #A38CA6;
+}
+
+/* 🛎️ BUTOANE AURII */
+.gold-btn {
+    width: 100%;
+    padding: 15px;
+    background: #D4AF37;
+    color: #2D0933;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+}
+
+.gold-btn:hover {
+    background-color: #2D0933;
+    color: #D4AF37;
+}
