@@ -366,3 +366,50 @@ p {
 section {
     padding: 120px 30px !important; /* Spațiu uriaș sus și jos */
 }
+/* ==========================================
+   👑 TEMA DE LUX: MOV ȘI AURIU (Epic Events)
+   ========================================== */
+
+body {
+    background-color: #ffffff !important; /* Fundal alb curat */
+    color: #4A154B !important; /* Textul general devine un mov închis foarte elegant */
+    font-family: 'Segoe UI', Arial, sans-serif !important;
+}
+
+/* 1. TITLURILE DEVIN MOV SAU AURII */
+h1 {
+    color: #4A154B !important; /* Mov închis regal */
+    font-size: 3.5rem !important;
+    font-weight: 800 !important;
+}
+
+h2 {
+    color: #D4AF37 !important; /* Auriu metalic superb */
+    font-size: 2.8rem !important;
+    font-weight: 800 !important;
+    text-align: center !important;
+}
+
+h3 {
+    color: #4A154B !important; /* Mov regal */
+    font-size: 1.8rem !important;
+}
+
+/* 2. BUTOANELE (Aurii cu text mov/alb) */
+.btn, button, .cta-button {
+    background: linear-gradient(135deg, #D4AF37 0%, #FBF5B7 100%) !important; /* Gradient Auriu strălucitor */
+    color: #4A154B !important; /* Text mov pe buton auriu */
+    font-weight: 700 !important;
+    border-radius: 50px !important;
+    border: 2px solid #D4AF37 !important;
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3) !important;
+    padding: 15px 35px !important;
+    font-size: 1.2rem !important;
+    transition: all 0.4s ease !important;
+}
+
+.btn:hover, button:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 15px 25px rgba(212, 175, 55, 0.5) !important;
+    background: #4A154B !important; /* Când pui mouse-ul se face mov */
+    color: #D4AF37 !important; /*
