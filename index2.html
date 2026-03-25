@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epic Events - Aplicație Management Premium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <aside class="sidebar">
+            <div class="logo-area" style="text-align: center; margin-bottom: 30px; padding-bottom: 15px; border-bottom: 1px solid rgba(212,175,55,0.2);">
+                <img src="logo.png" alt="Logo Epic Events" style="max-width: 160px; height: auto; display: block; margin: 0 auto;">
+                <span style="font-size: 0.75rem; color: #D4AF37; letter-spacing: 2px; text-transform: uppercase; margin-top: 10px; display: block;">Luxury Events</span>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="#dashboard" class="nav-item active">📊 Panou Control</a>
+                <a href="#calculator" class="nav-item">💰 Calculator Buget</a>
+                <a href="#checklist" class="nav-item">✅ To-Do List</a>
+                <a href="#booking" class="nav-item">📅 Calendar</a>
+                <a href="#documents" class="nav-item">📂 Documente</a>
+                <a href="#quiz" class="nav-item">🎤 Quiz Stil</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <p>Epic Events © 2026</p>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            
+            <header class="app-header">
+                <div class="welcome">
+                    <h1>Planifică viitorul tău eveniment <span class="gold-text">Epic</span>!</h1>
+                    <p>Aplicația ta interactivă de gestiune (Mov & Auriu Premium).</p>
+                </div>
+                <div class="user-profile">
+                    <img src="maria.jpg" alt="Profil Maria" class="avatar" style="width: 50px; height: 50px; border-radius: 50%; border: 2px solid #D4AF37; object-fit: cover;">
+                </div>
+            </header>
+
+            <div class="app-sections-grid">
+
+                <div class="app-card wide-card">
+                    <div style="display: flex; align-items: center; gap: 20px;">
+                        <div style="background: linear-gradient(135deg, #D4AF37 0%, #FBF5B7 100%); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: #2D0933; font-weight: bold; border: 3px solid #ffffff; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+                            AM
+                        </div>
+                        <div>
+                            <h2 style="font-family: 'Playfair Display', serif; color: #2D0933; font-size: 1.8rem;">Evenimentul lui Alex & Maria</h2>
+                            <p style="color: #D4AF37; font-weight: 600; font-size: 1rem; letter-spacing: 1px;">📅 Data: 14 Iunie 2026 | Locație: Palatul Regal</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="app-card wide-card" id="quiz-paleta">
+                    <div class="card-header" style="display: flex; align-items: center; gap: 10px; margin-bottom: 25px; border-bottom: 1px solid #F1EEF4; padding-bottom: 15px;">
+                        <span class="icon" style="font-size: 1.5rem;">🔮</span>
+                        <h3>AI Palette & Moodboard generator</h3>
+                    </div>
+                    <p style="color: #777; font-size: 0.95rem; margin-bottom: 20px;">Alege vibe-ul evenimentului tău pentru a genera paleta cromatică:</p>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                        <div style="background: #FDFBFF; border: 1px solid #F1EEF4; border-radius: 16px; padding: 20px; text-align: center;">
+                            <h4 style="color: #2D0933; font-family: 'Playfair Display', serif; margin-bottom: 15px;">Apus în Toscana</h4>
+                            <div style="display: flex; justify-content: center; gap: 8px;">
+                                <div style="width: 35px; height: 35px; border-radius: 50%; background: #D4AF37;"></div>
+                                <div style="width: 35px; height: 35px; border-radius: 50%; background: #E07A5F;"></div>
+                                <div style="width: 35px; height: 35px; border-radius: 50%; background: #F4F1DE;"></div>
+                            </div>
+                        </div>
+                        <div style="background: #FDFBFF; border: 1px solid #F1EEF4; border-radius: 16px; padding: 20px; text-align: center;">
+                            <h4 style="color: #2D0933; font-family: 'Playfair Display', serif; margin-bottom: 15px;">Noapte Regală</h4>
+                            <div style="display: flex; justify-content: center; gap: 8px;">
+                                <div style="width: 35px; height: 35px; border-radius: 50%; background: #2D0933;"></div>
+                                <div style="width: 35px; height: 35px; border-radius: 50%; background: #D4AF37;"></div>
+                                <div style="width: 35px; height: 35px; border-radius: 50%; background: #1A1A1A;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="gold-btn" style="margin-top: 25px;">Aplicați paleta pe eveniment</button>
+                </div>
+
+                <div class="app-card" id="calculator">
+                    <div class="card-header" style="display: flex; align-items: center; gap: 10px; margin-bottom: 25px; border-bottom: 1px solid #F1EEF4; padding-bottom: 15px;">
+                        <span class="icon">💰</span>
+                        <h3>Calculator Buget</h3>
+                    </div>
+                    <div>
+                        <label style="font-size: 0.9rem; font-weight: 600;">Tip Eveniment:</label>
+                        <select id="eventType" onchange="calculateBudget()" style="margin-top: 8px; margin-bottom: 15px;">
+                            <option value="3000">Nuntă Premium (de la 3000 €)</option>
+                            <option value="2000">Botez Elegant (de la 2000 €)</option>
+                        </select>
+
+                        <label style="font-size: 0.9rem; font-weight: 600;">Număr Invitați:</label>
+                        <input type="number" id="guests" value="100" style="margin-top: 8px; margin-bottom: 15px;" oninput="calculateBudget()">
+
+                        <div class="total-box" style="margin-top: 15px; background: #2D0933; color: white; padding: 20px; border-radius: 15px; display: flex; justify-content: space-between; align-items: center;">
+                            <span>Total Estimat:</span>
+                            <h2 id="totalPrice" style="color: #D4AF37; font-family: 'Playfair Display', serif;">4000 €</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="app-card" id="checklist">
+                    <div class="card-header" style="display: flex; align-items: center; gap: 10px; margin-bottom: 25px; border-bottom: 1px solid #F1EEF4; padding-bottom: 15px;">
+                        <span class="icon">✅</span>
+                        <h3>To-Do List Eveniment</h3>
+                    </div>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 15px;">
+                        <li style="display: flex; align-items: center; gap: 12px; background: #FDFBFF; padding: 15px; border-radius: 12px; border: 1px solid #F1EEF4;">
+                            <input type="checkbox" id="t1" checked style="accent-color: #D4AF37; width: 18px; height: 18px;"><label for="t1">Stabilirea locației</label>
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 12px; background: #FDFBFF; padding: 15px; border-radius: 12px; border: 1px solid #F1EEF4;">
+                            <input type="checkbox" id="t2" style="accent-color: #D4AF37; width: 18px; height: 18px;"><label for="t2">Contractare DJ / Formație</label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="app-card" id="booking">
+                    <div class="card-header" style="display: flex; align-items: center; gap: 10px; margin-bottom: 25px; border-bottom: 1px solid #F1EEF4; padding-bottom: 15px;">
+                        <span class="icon">📅</span>
+                        <h3>Rezervă o Consultanță</h3>
+                    </div>
+                    <input type="date" style="margin-bottom: 15px;">
+                    <button class="gold-btn" onclick="alert('Rezervare trimisă!')">Trimite Rezervarea</button>
+                </div>
+
+                <div class="app-card" id="documents">
+                    <div class="card-header" style="display: flex; align-items: center; gap: 10px; margin-bottom: 25px; border-bottom: 1px solid #F1EEF4; padding-bottom: 15px;">
+                        <span class="icon">📂</span>
+                        <h3>Documentele Tale</h3>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; background: #FDFBFF; padding: 15px; border-radius: 12px; border: 1px solid #F1EEF4;">
+                        <div>
+                            <h4 style="font-size: 0.95rem; color: #2D0933;">Contract Prestări Servicii.pdf</h4>
+                            <span style="font-size: 0.8rem; color: #777;">Semnat pe 15.10.2025</span>
+                        </div>
+                        <a href="#" style="color: #D4AF37; font-weight: 600; text-decoration: none;">Descarcă</a>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function calculateBudget() {
+            let basePrice = parseInt(document.getElementById('eventType').value);
+            let guests = parseInt(document.getElementById('guests').value) || 0;
+            let guestCost = guests * 10; 
+
+            let total = basePrice + guestCost;
+            document.getElementById('totalPrice').innerText = total + " €";
+        }
+    </script>
+</body>
+</html>
