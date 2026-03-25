@@ -3,148 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Epic Events - Panou Control</title>
+    <title>Epic Events - Aplicație Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="manifest" href="manifest.json">
 </head>
-    <header> ... </header>
-<section class="hero"> ... </section>
-
-<section class="about-section">
-    <div class="about-content">
-        <h2>Cine Suntem Noi?</h2>
-        <p>"Compania noastră de management de evenimente îmbină expertiza profesională cu atenția meticuloasă la detalii..."</p>
-        
-        <div class="mission-vision-grid">
-            <div class="info-box">
-                <h3>Viziunea Noastră</h3>
-                <p>Ne dorim să devenim liderul inovator în domeniul organizării de evenimente...</p>
-            </div>
-            <div class="info-box">
-                <h3>Misiunea Noastră</h3>
-                <p>Suntem dedicați furnizării de servicii de cea mai înaltă calitate...</p>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="services"> ... </section>
-<section class="team-section"> ... </section>
 <body>
-    <div class="notification-area">
-        <div class="notif-card pulse">
-            <span class="notif-icon">🔔</span>
-            <div class="notif-content">
-                <strong>MEMENTO IMPORTANT</strong>
-                <p>Confirmă numărul de meniuri până mâine la 12:00.</p>
-                <span class="notif-time">Acum 2 minute</span>
+
+    <div class="app-container">
+        
+        <aside class="sidebar">
+            <div class="logo-area">
+                <h2>Epic Events</h2>
+                <span>Aplicație Management</span>
             </div>
-        </div>
+            
+            <nav class="nav-menu">
+                <a href="#dashboard" class="nav-item active">📊 Dashboard</a>
+                <a href="#events" class="nav-item">📅 Evenimente</a>
+                <a href="#team" class="nav-item">👥 Echipa Noastră</a>
+                <a href="#contact" class="nav-item">✉️ Contact</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <p>v 1.0.0</p>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            
+            <header class="app-header">
+                <div class="welcome">
+                    <h1>Bine ai venit, <span class="gold-text">Epic Events</span>!</h1>
+                    <p>Panoul tău de control pentru evenimente premium.</p>
+                </div>
+                <div class="user-profile">
+                    <img src="maria.jpg" alt="Profil Maria" class="avatar">
+                </div>
+            </header>
+
+            <div class="dashboard-grid">
+                
+                <div class="app-card stat-card">
+                    <h3>Evenimente Active</h3>
+                    <span class="stat-number">12</span>
+                    <p>În faza de organizare</p>
+                </div>
+
+                <div class="app-card stat-card">
+                    <h3>Clienți Noi</h3>
+                    <span class="stat-number">5</span>
+                    <p>Săptămâna aceasta</p>
+                </div>
+
+                <div class="app-card stat-card">
+                    <h3>Mesaje</h3>
+                    <span class="stat-number">3</span>
+                    <p>Neasculte / Necitite</p>
+                </div>
+
+                <div class="app-card wide-card" id="team">
+                    <h3>👥 Echipa Ta</h3>
+                    <div class="team-list">
+                        <div class="team-mini-card">
+                            <img src="maria.jpg" alt="CEO" class="mini-avatar">
+                            <div>
+                                <h4>Maria Ruxandra</h4>
+                                <span>CEO & Director</span>
+                            </div>
+                        </div>
+                        <div class="team-mini-card">
+                            <img src="delia.jpg" alt="Marketing" class="mini-avatar">
+                            <div>
+                                <h4>Delia Maria</h4>
+                                <span>Director Marketing</span>
+                            </div>
+                        </div>
+                        <div class="team-mini-card">
+                            <img src="alice.jpg" alt="Finance" class="mini-avatar">
+                            <div>
+                                <h4>Alice Maria</h4>
+                                <span>Director Financiar</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
     </div>
-<nav class="bottom-nav">
-    <a href="index.html" class="active">🏠 Bord</a>
-    <a href="catalog.html">📋 Catalog</a>
-    <a href="muzica.html">🎵 Muzică</a>
-    <a href="capsula.html">⏳ Capsulă</a>
-    <a href="rsvp.html">👥 Invitați</a>
-</nav>
 
-    <div class="container">
-        <h1>Salut, Maria! 👋</h1>
-        
-        <div class="card shadow">
-            <h3>⏳ Timeline Eveniment</h3>
-            <p>Alegerea locației: ✅ Gata</p>
-            <p>Degustare meniu: 📅 Săptămâna viitoare</p>
-            <div class="progress-bar"><div class="progress" style="width: 40%;"></div></div>
-        </div>
-
-        <div class="card shadow">
-            <h3>💰 Buget în timp real</h3>
-            <p>Total estimat: 5.000€</p>
-            <p>Plătit: 2.000€</p>
-            <p><strong>Rest de plată: 3.000€</strong></p>
-        </div>
-        
-        <button class="btn-primary">Chat cu Managerul 💬</button>
-    </div>
-
-    <script src="sw-register.js"></script>
 </body>
 </html>
-<div class="card shadow" style="border-left: 5px solid #28a745;">
-    <h3>🌿 Amprenta de Carbon</h3>
-    <p>Evenimentul tău a generat 1.2 tone CO2.</p>
-    <button class="btn-green">Compensează: Plantează 10 copaci 🌳</button>
-</div>
-<a href="capsula.html">⏳ Capsulă</a><section class="team-section">
-    <h2>Echipa Epic Events</h2>
-    <p class="section-subtitle">În spatele fiecărui eveniment de succes se află o echipă pasionată — organizatori, stiliști, coordonatori și visători.</p>
-
-    <div class="team-grid">
-        <div class="team-card">
-            <div class="team-image">
-                <img src="https://images.unsplash.com/photo-1573496389141-75657b21ec41?q=80&w=400&auto=format&fit=crop" alt="Mocanu Maria Ruxandra">
-            </div>
-            <div class="team-info">
-                <h3>Mocanu Maria Ruxandra</h3>
-                <span class="role">CEO / Director</span>
-                <p>Conduce viziunea Epic Events, asigurându-se că fiecare detaliu reflectă eleganță și originalitate.</p>
-            </div>
-        </div>
-
-        <div class="team-card">
-            <div class="team-image">
-                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400&auto=format&fit=crop" alt="Pînzaru Delia Maria">
-            </div>
-            <div class="team-info">
-                <h3>Pînzaru Delia Maria</h3>
-                <span class="role">Marketing & Comms Director</span>
-                <p>Se ocupă de imaginea brandului și comunicarea eficientă cu clienții noștri.</p>
-            </div>
-        </div>
-
-        <div class="team-card">
-            <div class="team-image">
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=400&auto=format&fit=crop" alt="Patrașcu Alice Maria">
-            </div>
-            <div class="team-info">
-                <h3>Patrașcu Alice Maria</h3>
-                <span class="role">Finance & Control Director</span>
-                <p>Garantează transparența financiară și gestionarea inteligentă a bugetelor.</p>
-            </div>
-        </div>
-
-        <div class="team-card">
-            <div class="team-image">
-                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=400&auto=format&fit=crop" alt="Vîrgă Ștefania Iuliana">
-            </div>
-            <div class="team-info">
-                <h3>Vîrgă Ștefania Iuliana</h3>
-                <span class="role">Office & HR Manager</span>
-                <p>Menține armonia în echipă și se asigură că avem cele mai bune resurse umane.</p>
-            </div>
-        </div>
-
-        <div class="team-card">
-            <div class="team-image">
-                <img src="https://images.unsplash.com/photo-1519085360754-25d12c8b937e?q=80&w=400&auto=format&fit=crop" alt="Grindu Alex">
-            </div>
-            <div class="team-info">
-                <h3>Grindu Alex</h3>
-                <span class="role">Lead Coordinator / Activations Manager</span>
-                <p>Maestrul logisticii de pe teren, cel care transformă planul în realitate în ziua evenimentului.</p>
-            </div>
-        </div>
-
-        <div class="team-card">
-            <div class="team-image">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop" alt="Mardare Eduard Ștefan">
-            </div>
-            <div class="team-info">
-                <h3>Mardare Eduard Ștefan</h3>
-                <span class="role">Sales Director / VP of Sales</span>
-                <p>Persoana de contact pentru noile colaborări și pachete personalizate.</p>
-            </div>
-        </div>
-    </div>
-</section>
