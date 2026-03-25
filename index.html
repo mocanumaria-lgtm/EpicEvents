@@ -94,3 +94,119 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epic Events - Aplicație Management Premium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <aside class="sidebar">
+            <div class="logo-area">
+                <h2>Epic Events</h2>
+                <span>Aplicație Management</span>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="#dashboard" class="nav-item active">📊 Panou Control</a>
+                <a href="#calculator" class="nav-item">💰 1. Calculator Buget</a>
+                <a href="#checklist" class="nav-item">✅ 2. Check-list Eveniment</a>
+                <a href="#booking" class="nav-item">📅 3. Calendar Întâlniri</a>
+                <a href="#team" class="nav-item">👥 Echipa Noastră</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <p>v 1.1.0</p>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            
+            <header class="app-header">
+                <div class="welcome">
+                    <h1>Să planificăm ceva <span class="gold-text">Epic</span>!</h1>
+                    <p>Panoul tău interactiv de gestiune evenimente.</p>
+                </div>
+                <div class="user-profile">
+                    <img src="maria.jpg" alt="Profil Maria" class="avatar">
+                </div>
+            </header>
+
+            <div class="app-sections-grid">
+
+                <div class="app-card wide-card" id="calculator">
+                    <div class="card-header">
+                        <span class="icon">💰</span>
+                        <h3>Calculator Buget Estimativ</h3>
+                    </div>
+                    <div class="calculator-box">
+                        <div class="form-group">
+                            <label>Tip Eveniment:</label>
+                            <select id="eventType" onchange="calculateBudget()">
+                                <option value="3000">Nuntă Premium (de la 3000 €)</option>
+                                <option value="2000">Botez Elegant (de la 2000 €)</option>
+                                <option value="1500">Petrecere Tematică / Majorat (de la 1500 €)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Număr Invitați (10 € / persoană logistică):</label>
+                            <input type="number" id="guests" value="100" min="10" oninput="calculateBudget()">
+                        </div>
+
+                        <div class="form-group checkboxes">
+                            <label><input type="checkbox" id="candybar" value="500" onchange="calculateBudget()"> Candy Bar & Lemonade Bar (+500 €)</label>
+                            <label><input type="checkbox" id="decor" value="1000" onchange="calculateBudget()"> Aranjamente Florale Premium (+1000 €)</label>
+                            <label><input type="checkbox" id="dj" value="800" onchange="calculateBudget()"> DJ & Sunet Profesional (+800 €)</label>
+                        </div>
+
+                        <div class="total-box">
+                            <span>Total Estimat:</span>
+                            <h2 id="totalPrice">4500 €</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="app-card" id="checklist">
+                    <div class="card-header">
+                        <span class="icon">✅</span>
+                        <h3>To-Do List Eveniment</h3>
+                    </div>
+                    <ul class="todo-list">
+                        <li>
+                            <input type="checkbox" id="task1" checked>
+                            <label for="task1">Stabilirea locației și a datei</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="task2">
+                            <label for="task2">Alegerea tematicii și a paletei de culori</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="task3">
+                            <label for="task3">Contractare DJ / Formație</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="task4">
+                            <label for="task4">Degustare meniu și tort</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="task5">
+                            <label for="task5">Trimiterea invitațiilor digitale</label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="app-card" id="booking">
+                    <div class="card-header">
+                        <span class="icon">📅</span>
+                        <h3>Rezervă o Consultanță</h3>
+                    </div>
+                    <div class="booking-box">
+                        <div class="form-group">
+                            <label>Alege Zi
