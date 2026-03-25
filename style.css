@@ -276,3 +276,93 @@ input:focus, textarea:focus, select:focus {
     line-height: 1.6;
     margin-bottom: 0;
 }
+/* ==========================================
+   💎 STILUL PREMIUM EPIC EVENTS (URBAN & LUXURY)
+   ========================================== */
+
+/* 1. FUNDALUL ȘI TEXTUL GENERAL */
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, sans-serif !important;
+    background-color: #fcfcfd !important; /* Un alb-crem foarte discret, de lux */
+    color: #23272e !important; /* Gri închis intens, nu negru obositor */
+    line-height: 1.8 !important; /* Spațiu mare între rânduri */
+}
+
+/* 2. TITLURILE (Mari, impunătoare și clare) */
+h1 {
+    font-size: 3.5rem !important; /* URIAȘ și vizibil */
+    font-weight: 800 !important;
+    letter-spacing: -1.5px !important;
+    color: #11141a !important;
+    margin-bottom: 25px !important;
+}
+
+h2 {
+    font-size: 2.8rem !important; /* Titlurile de secțiuni foarte mari */
+    font-weight: 800 !important;
+    letter-spacing: -1px !important;
+    color: #11141a !important;
+    margin-bottom: 30px !important;
+    text-align: center !important;
+}
+
+h3 {
+    font-size: 1.6rem !important;
+    font-weight: 700 !important;
+    color: #1a1e26 !important;
+    margin-bottom: 15px !important;
+}
+
+/* 3. PARAGRAFELE (Scris mare, ușor de citit) */
+p {
+    font-size: 1.25rem !important; /* Text considerabil mai mare */
+    color: #444b59 !important; /* Culoare elegantă */
+    margin-bottom: 25px !important;
+}
+
+/* Subtitlurile de sub H2 */
+.section-subtitle {
+    font-size: 1.35rem !important;
+    color: #667085 !important;
+    max-width: 800px !important;
+    margin: 0 auto 60px auto !important;
+    text-align: center !important;
+}
+
+/* 4. CARDURILE DE ECHIPĂ ȘI SERVICII (Aerisite și elegante) */
+.team-card, .service-card, .info-box {
+    background: #ffffff !important;
+    border-radius: 24px !important; /* Colțuri foarte rotunjite, moderne */
+    padding: 40px !important; /* Spațiu imens în interior */
+    border: 1px solid #eaeef3 !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.04) !important; /* Umbră fină de revistă */
+    transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1) !important;
+}
+
+.team-card:hover, .service-card:hover {
+    transform: translateY(-12px) !important;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.08) !important;
+}
+
+.team-info h3 {
+    font-size: 1.5rem !important; /* Numele echipei mai mari */
+    margin-top: 15px !important;
+}
+
+.team-info .role {
+    font-size: 1.1rem !important; /* Funcția mai vizibilă */
+    font-weight: 700 !important;
+    color: #e63946 !important; /* Un roșu-coral de lux */
+    display: block !important;
+    margin-bottom: 15px !important;
+}
+
+.team-info p {
+    font-size: 1.1rem !important; /* Descrierea echipei mai mare */
+    line-height: 1.6 !important;
+}
+
+/* 5. SECȚIUNILE (Să respire!) */
+section {
+    padding: 120px 30px !important; /* Spațiu uriaș sus și jos */
+}
