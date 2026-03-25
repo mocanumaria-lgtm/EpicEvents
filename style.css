@@ -473,3 +473,46 @@ input[type="checkbox"]:checked + label {
     background-color: #2D0933;
     color: #D4AF37;
 }
+/* ==========================================
+   💎 STILUL SUPREM DELUXE (DOAR ADAUGĂ LA FINAL)
+   ========================================== */
+
+/* Toate cardurile devin super elegante cu margini aurii fine */
+.app-card {
+    background: #ffffff !important;
+    border-radius: 24px !important;
+    padding: 35px !important;
+    border: 1px solid rgba(212, 175, 55, 0.2) !important; /* Margine aurie fină */
+    box-shadow: 0 20px 50px rgba(45, 9, 51, 0.05) !important;
+}
+
+/* Butoanele devin catifelate și strălucitoare */
+.gold-btn {
+    background: linear-gradient(135deg, #D4AF37 0%, #FBF5B7 100%) !important; /* Gradient auriu */
+    color: #2D0933 !important;
+    font-weight: 700 !important;
+    border-radius: 50px !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none !important;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2) !important;
+    transition: all 0.3s ease !important;
+}
+
+.gold-btn:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.4) !important;
+}
+
+/* Căsuțele unde scriu clienții devin mai rotunjite */
+input, select, textarea {
+    border-radius: 15px !important;
+    border: 2px solid #EAE8EF !important;
+    padding: 15px !important;
+    font-size: 1rem !important;
+}
+
+input:focus, select:focus {
+    border-color: #D4AF37 !important; /* Se aprind în auriu când dai click */
+}
