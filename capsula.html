@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capsula Timpului - Epic Events</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .locked { filter: blur(5px); pointer-events: none; opacity: 0.5; }
+        .status-msg { text-align: center; padding: 20px; font-weight: bold; color: #ff4757; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>⏳ Capsula Timpului</h1>
+        
+        <div id="status" class="status-msg">Se verifică timpul...</div>
+
+        <div id="continut-capsula" class="locked">
+            <div class="card shadow">
+                <h3>🎬 Filmul Evenimentului</h3>
+                <p>Amintiri de la nunta/petrecerea ta din 2025.</p>
+                <button class="btn-primary">Redă Video</button>
+            </div>
+            <div class="card shadow">
+                <h3>💌 Mesaje de la Invitați</h3>
+                <p>"Să fiți fericiți!" - De la bunica</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // SETEAZĂ AICI DATA EVENIMENTULUI (An, Lună-1, Zi)
+        const dataEveniment = new Date(2025, 4, 25); // Exemplu: 25 Mai 2025
+        const azi = new Date();
+        
+        // Verificăm dacă a trecut un an (365 zile)
+        const unAnInMilisecunde = 365 * 24 * 60 * 60 * 1000;
+        
+        if (azi - dataEveniment >= unAnInMilisecunde) {
+            document.getElementById('status').innerHTML = "🔓 Capsula s-a deblocat! Bucură-te de amintiri.";
+            document.getElementById('status').style.color = "#2ed573";
+            document.getElementById('continut-capsula').classList.remove('locked');
+        } else {
+            const zileRamase = Math.ceil((unAnInMilisecunde - (azi - dataEveniment)) / (1000 * 60 * 60 * 24));
+            document.getElementById('status').innerHTML = "🔒 Această capsulă se va debloca peste " + zileRamase + " zile.";
+        }
+    </script>
+
+    <nav class="bottom-nav">
+        <a href="index.html">🏠 Bord</a>
+        <a href="capsula.html" class="active">⏳ Capsulă</a>
+    </nav>
+</body>
+</html>
